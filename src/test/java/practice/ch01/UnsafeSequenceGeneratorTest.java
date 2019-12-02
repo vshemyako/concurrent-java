@@ -1,8 +1,5 @@
 package practice.ch01;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.concurrent.ExecutorService;
@@ -44,7 +41,7 @@ public class UnsafeSequenceGeneratorTest {
      * Just an example that different threads do not run a race condition.
      */
     @Test
-    public static void main(String... args) {
+    public void shouldBeSafe() {
         ScheduledExecutorService executorService = null;
         try {
             executorService = Executors.newScheduledThreadPool(threadsNumber);
