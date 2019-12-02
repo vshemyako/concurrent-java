@@ -1,5 +1,6 @@
 package practice.ch01;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.concurrent.ExecutorService;
@@ -15,27 +16,36 @@ public class UnsafeSequenceGeneratorTest {
     private static UnsafeSequenceGenerator unsafeSequenceGenerator = new UnsafeSequenceGenerator();
     private static SafeSequenceGenerator safeSequenceGenerator = new SafeSequenceGenerator();
     private static int threadsNumber = Runtime.getRuntime().availableProcessors() * 2;
+    private static int loopIterationsNumber = 10000;
+    private static int targetNumber = threadsNumber * loopIterationsNumber;
 
     /**
      * Just an illustration that multiple threads get the same numbers (race condition).
      */
     @Test
-    public void shouldBeUnsafe() {
+    public void shouldBeUnsafe() throws InterruptedException {
         ExecutorService executorService = null;
         try {
             executorService = Executors.newFixedThreadPool(threadsNumber);
             for (int index = 0; index < threadsNumber; index++) {
-                executorService.execute(() -> {
-                    int nextValue = unsafeSequenceGenerator.getNextValue();
-                    System.out.println(nextValue);
-                });
+                executorService.execute(unsafeIncrement);
             }
         } finally {
             if (executorService != null) {
                 executorService.shutdown();
             }
         }
+
+        Thread.sleep(1000);
+        int currentValue = unsafeSequenceGenerator.getCurrentValue();
+        Assert.assertTrue(targetNumber > currentValue);
     }
+
+    private static Runnable unsafeIncrement = () -> {
+        for (int i = 0; i < loopIterationsNumber; i++) {
+            unsafeSequenceGenerator.getNextValue();
+        }
+    };
 
     /**
      * Just an example that different threads do not run a race condition.

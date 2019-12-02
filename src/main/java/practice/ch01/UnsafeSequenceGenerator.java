@@ -14,4 +14,11 @@ public class UnsafeSequenceGenerator {
     public int getNextValue() {
         return value++;
     }
+
+    /**
+     * @return current value in the sequence, without incrementing it.
+     */
+    public int getCurrentValue() {
+        return value;
+    }
 }
