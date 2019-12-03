@@ -9,5 +9,8 @@
  * -- 1. Don't share state variables across threads<br>
  * -- 2. Make state variables immutable<br>
  * -- 3. Use synchronization whenever accessing state variables<br>
+ * Sub chapter 2.1<br>
+ * - Thread safe classes encapsulate any needed synchronization so that clients don't have to provide their own.<br>
+ * - Stateless objects are always thread safe (local variables are stored on the thread's stack)<br>
  */
 package practice;
