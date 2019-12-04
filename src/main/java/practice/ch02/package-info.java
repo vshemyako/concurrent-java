@@ -30,4 +30,4 @@
  * - For every invariant that involves more than one variable, all the variables involved in that invariant must be
  * guarded by the same lock.<br>
  */
-package practice;
+package practice.ch02;
