@@ -21,6 +21,13 @@
  * - <b>Compound action</b> - sequences of operations which have to be executed atomically in order to stay thread-safe.<br>
  * Sub chapter 2.3<br>
  * - When multiple variables participate in an invariant, they are no longer independent and the value of one constrains
- * the allowed values of the others.<br>
+ * the allowed values of the others. Thus to preserve state consistency, update related state variables in a single
+ * operation.<br>
+ * - <b>Mutex</b> - is a mutual exclusion lock which allows only one thread at most to own the lock.<br>
+ * - <b>Reentrancy</b> - is a locking behavior when a thread tries to acquire a lock it already holds and succeeds.<br>
+ * Sub chapter 2.4<br>
+ * - Every shared mutable variable should be guarded by exactly one lock.<br>
+ * - For every invariant that involves more than one variable, all the variables involved in that invariant must be
+ * guarded by the same lock.<br>
  */
 package practice;
