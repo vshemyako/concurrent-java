@@ -18,5 +18,8 @@
  * Sub chapter 3.4<br>
  * - Immutable objects are always thread safe.<br>
  * - It's always good idea to make all of the fields final unless they need to be mutable.<br>
+ * Sub chapter 3.5<br>
+ * - Immutable objects can be used safely by any thread without additional synchronization even when no synchronization
+ * was used to publish them.<br>
  */
 package practice.ch03;
