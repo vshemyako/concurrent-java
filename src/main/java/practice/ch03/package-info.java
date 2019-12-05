@@ -11,9 +11,12 @@
  * - Volatile variables can only guarantee visibility.<br>
  * Sub chapter 3.2<br>
  * - Do not allow to escape 'this' reference during construction.<br>
- * Sub chapter 3.3.<br>
+ * Sub chapter 3.3<br>
  * - <b>Thread confinement</b> - access to an object is confined to a single thread.<br>
  * - <b>Stack confinement</b> - special case of thread confinement, when an object can be reached only through local
  * variables.<br>
+ * Sub chapter 3.4<br>
+ * - Immutable objects are always thread safe.<br>
+ * - It's always good idea to make all of the fields final unless they need to be mutable.<br>
  */
 package practice.ch03;
