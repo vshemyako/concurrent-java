@@ -9,5 +9,8 @@
  * Sub chapter 4.2<br>
  * - If a class is composed of multiple independent thread-safe state variables and has no operations that have any
  * invalid state transitions, then it can delegate thread safety to the underlying state variables.<br>
+ * Sub chapter 4.3<br>
+ * - If a state variable is thread-safe, doesn't participate in any invariants that constrain its value, and has no
+ * prohibited state transitions for any of its operations, then it can be safely published.<br>
  */
 package practice.ch04;
