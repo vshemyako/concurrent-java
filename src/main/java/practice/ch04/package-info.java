@@ -12,5 +12,8 @@
  * Sub chapter 4.3<br>
  * - If a state variable is thread-safe, doesn't participate in any invariants that constrain its value, and has no
  * prohibited state transitions for any of its operations, then it can be safely published.<br>
+ * Sub chapter 4.5<br>
+ * Document a class's thread safety guarantees for its clients; document its synchronization policy for its
+ * maintainers.<br>
  */
 package practice.ch04;
