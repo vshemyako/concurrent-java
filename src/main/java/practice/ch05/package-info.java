@@ -12,5 +12,6 @@
  * <b>Latch</b> is a synchronizer that can delay progress of threads until it reaches its terminal state.<br>
  * <b>Semaphore</b> is a synchronizer that controls number of activities that can access the resource or perform a given
  * action at the same time.<br>
+ * <b>Barrier</b> is a reusable synchronizer which blocks a group of threads until some event has occurred.<br>
  **/
 package practice.ch05;
