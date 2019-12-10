@@ -10,5 +10,7 @@
  * When you see code of the form:<br>
  * new Thread(runnable).start()<br>
  * and you think you might want a more flexible execution policy, seriously consider replacing it with Executor.<br>
+ * There is no reason to use {@link java.util.Timer} class in Java 5.0 or later applications. Use {@link java.util.concurrent.ScheduledExecutorService}
+ * instead.<br>
  **/
 package practice.ch06;
