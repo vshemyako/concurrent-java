@@ -8,5 +8,7 @@
  * Interruption is the most sensible way to implement cancellation.<br>
  * Because each thread has its own interruption policy, you should not interrupt a thread unless you know what
  * interruption means to that thread.<br>
+ * Only code that implements thread's interruption policy may swallow the interruption request. General purpose code
+ * or library should never swallow an interruption request.<br>
  **/
 package practice.ch07;
