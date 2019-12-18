@@ -14,5 +14,6 @@
  * {@link java.util.concurrent.TimeoutException} and you know that the result is not longer needed use {@link java.util.concurrent.Future#cancel(boolean)}
  * method.<br>
  * For long-running applications always use uncaught exception handlers for all thread to at least log the exceptions.<br>
+ * Daemon threads are not a good substitute for a properly managing the lifecycle of services of an application.<br>
  **/
 package practice.ch07;
