@@ -10,5 +10,8 @@
  * interruption means to that thread.<br>
  * Only code that implements thread's interruption policy may swallow the interruption request. General purpose code
  * or library should never swallow an interruption request.<br>
+ * When {@link java.util.concurrent.Future#get()} throws {@link java.lang.InterruptedException} or
+ * {@link java.util.concurrent.TimeoutException} and you know that the result is not longer needed use {@link java.util.concurrent.Future#cancel(boolean)}
+ * method.<br>
  **/
 package practice.ch07;
